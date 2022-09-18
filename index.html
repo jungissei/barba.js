@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ページ別 -->
+  <title>PAGE01 / 非同期遷移 - barba.js</title>
+  <meta name="description" content="PAGE01のディスクリプションです。" />
+  <meta name="keywords" content="PAGE01, 非同期遷移, barba.js" />
+  <link rel="canonical" href="https://www.example.com/" />
+
+  <!-- 共通 -->
+  <meta property="og:site_name" content="非同期遷移 - barba.js" />
+  <meta property="og:locale" content="ja_JP" />
+
+  <!-- ページ別 -->
+  <meta property="og:url" content="https://www.example.com/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="PAGE01 / 非同期遷移 - barba.js" />
+  <meta property="og:description" content="PAGE01のディスクリプションです。" />
+  <meta property="og:image" content="https://example.com/image.jpg">
+  <meta property="og:image:alt" content="PAGE01のディスクリプションです。" />
+
+  <!-- 共通 -->
+  <meta property="twitter:site" content="@jungissei" />
+
+  <!-- ページ別 -->
+  <meta property="twitter:title" content="PAGE01 / 非同期遷移 - barba.js" />
+  <meta property="twitter:description" content="PAGE01のディスクリプションです。" />
+  <meta property="twitter:image:alt" content="PAGE01のディスクリプションです。" />
+  <meta property="twitter:image" content="https://example.com/image.jpg" />
+  <meta property="twitter:card" content="summary_large_image" />
+
+
+  <link rel="stylesheet" href="./lib/css/style.css">
+</head>
+<body>
+
+  <div id="wrapper" data-barba="wrapper">
+
+    <header>
+      <ul class="menu">
+        <li><a href="./index.html">PAGE01</a></li>
+        <li><a href="./index2.html">PAGE02</a></li>
+        <li><a href="./index3.html">PAGE03</a></li>
+      </ul>
+    </header>
+
+    <!-- barba.js/非同期通信書換 ここから -->
+    <main
+      id="page01"
+      class="async_content"
+      data-barba="container"
+      data-barba-namespace="page01">
+
+      <div class="txt">PAGE01</div>
+
+
+      <div id="anchor01">ANCHOR@PAGE01</div>
+
+      <div class="btn"
+        ><a href="./index2.html#anchor02"
+          class="btn_inner"
+          >ANCHOR@PAGE02 へ</a></div>
+
+    </main>
+    <!-- barba.js/非同期通信書換 ここまで -->
+
+    <footer>
+
+      <!-- barba.js/page transition animation ここから -->
+      <div id="page_transition_animation" style="display:none;"></div>
+      <!-- barba.js/page transition animation ここまで -->
+
+      <!--ページトップへ戻る ここから-->
+      <div id="go_top_arrow">
+        <a href="#wrapper" class="arrow_inner">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13.06 8.3">
+            <path
+              d="M3.37,8.42,9.89,2.14l6.54,6.29-2.09,2L9.87,6.15,5.44,10.41Z"
+              transform="translate(-3.37 -2.14)"/>
+          </svg>
+        </a>
+      </div>
+      <!--ページトップへ戻る ここまで-->
+
+    </footer>
+
+  </div>
+
+  <script src="./lib/js/barba.umd.js"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=default%2CArray.prototype.find%2CIntersectionObserver" crossorigin="anonymous" defer></script>
+
+  <script src="./lib/js/jquery.min.js"></script>
+  <script src="./lib/js/jquery.smooth-scroll.js"></script>
+
+  <script src="./lib/js/scripts.js"></script>
+</body>
+</html>
